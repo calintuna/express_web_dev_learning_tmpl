@@ -1,0 +1,28 @@
+div.container
+  +pageTitle()
+
+nav.navbar(class="bg-secondary fixed-top")
+  div.container
+    button.navbar-toggler(type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+
+    div
+      +pageTitle()
+
+
+    div.offcanvas.offcanvas-start(tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel")
+      div.offcanvas-header
+        h5.offcanvas-title#offcanvasNavbarLabel 
+        button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+
+      div.offcanvas-body
+        ul.navbar-nav(flex-grow-1 pe-3)
+          li.nav-item
+            a.nav-link(aria-current="page" href="/") Home 
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toogle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Dropdown Menu
+            ul.dropdown-menu
+              li 
+                a.dropdown-item(href="#") Dropdown Item#1
+
+        hr
